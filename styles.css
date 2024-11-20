@@ -1,0 +1,139 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Light background color */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Image Gallery Container */
+#image-gallery {
+    position: relative;
+    max-width: 700px; /* Adjusted to fit the size of the images */
+    margin: auto;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow effect */
+    background-color: #fff; /* White background for the gallery */
+    width: 700px; /* Fixed width to fit images */
+    height: 500px; /* Fixed height to fit images */
+}
+
+/* Gallery Container */
+#gallery-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Current Image Styling with Smooth Fade */
+#current-image {
+    width: 650px; /* Set image width to match the image size */
+    height: 450px; /* Set image height to match the image size */
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out; /* Longer fade effect */
+    position: absolute;
+    top: 0;
+    left: 50%; /* Center the image horizontally */
+    transform: translateX(-50%); /* Center the image horizontally */
+    z-index: 0;
+}
+
+/* Image Description Styling */
+#description {
+    font-size: 30px; /* Larger description text */
+    color: #333; /* Darker text color for readability */
+    margin-top: 20px;
+    position: relative;
+    z-index: 1;
+    font-weight: 600; /* Slightly bold for better visibility */
+    padding: 0 20px; /* Padding for spacing around the description */
+}
+
+/* Arrow Navigation Styling */
+.arrow {
+    position: absolute;
+    top: 50%;
+    font-size: 50px; /* Larger arrows */
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.7); /* Darker arrow background for better visibility */
+    padding: 20px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%; /* Round corners for arrows */
+    transition: background-color 0.3s ease; /* Smooth background change on hover */
+}
+
+.arrow:hover {
+    background-color: rgba(0, 0, 0, 0.9); /* Darker on hover */
+}
+
+#left-arrow {
+    left: 10px;
+}
+
+#right-arrow {
+    right: 10px;
+}
+
+/* Dots Navigation */
+#dots-container {
+    margin-top: 30px;
+}
+
+.dot {
+    height: 20px; /* Larger dots */
+    width: 20px;
+    margin: 0 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #3498db; /* Blue color for active dot */
+}
+
+.dot:hover {
+    background-color: #3498db; /* Blue on hover */
+}
+
+/* Responsive Design for Smaller Screens */
+@media screen and (max-width: 768px) {
+    #image-gallery {
+        width: 90%; /* Adjust gallery width to fit smaller screens */
+        height: auto; /* Let the height adjust automatically */
+    }
+
+    .arrow {
+        font-size: 40px; /* Adjusted for smaller screens */
+        padding: 15px;
+    }
+
+    #description {
+        font-size: 25px; /* Adjusted description font */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #image-gallery {
+        width: 100%; /* Adjust gallery to full screen width */
+        height: auto; /* Let the height adjust automatically */
+    }
+
+    .arrow {
+        font-size: 30px;
+        padding: 12px;
+    }
+
+    #description {
+        font-size: 20px;
+    }
+}
