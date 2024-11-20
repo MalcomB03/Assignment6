@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Image Gallery Section -->
+    <section id="image-gallery">
+        <!-- Left Arrow -->
+        <div id="left-arrow" class="arrow">&#8592;</div>
+
+        <!-- Image Display -->
+        <div id="gallery-container">
+            <img id="current-image" src="image1.jpg" alt="Image 1">
+            <p id="description">Description for Image 1</p>
+        </div>
+
+        <!-- Right Arrow -->
+        <div id="right-arrow" class="arrow">&#8594;</div>
+
+        <!-- Navigation Dots -->
+        <div id="dots-container">
+            <span class="dot" onclick="showImage(0)"></span>
+            <span class="dot" onclick="showImage(1)"></span>
+            <span class="dot" onclick="showImage(2)"></span>
+            <span class="dot" onclick="showImage(3)"></span>
+            <span class="dot" onclick="showImage(4)"></span>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
